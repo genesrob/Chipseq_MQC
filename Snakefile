@@ -22,7 +22,8 @@ rule all:
         expand("Novogene/Chipseq_1.12.20/QC/fastqc/{sample}_fastqc.html",sample=sample_list),
         expand("Novogene/Chipseq_1.12.20/Fastq/trimmed/{sample}_1_val_1.fq.gz",sample=sample_list_BAM),
         expand("Novogene/Chipseq_1.12.20/mapped/{sample}.bam",sample= sample_list_BAM),
-        expand("Novogene/Chipseq_1.12.20/mapped/{sample}.sorted.bam",sample= sample_list_BAM)
+        expand("Novogene/Chipseq_1.12.20/mapped/{sample}.sorted.bam",sample= sample_list_BAM),
+        expand("Novogene/Chipseq_1.12.20/mapped/{sample}.sorted.bam.bai",sample= sample_list_BAM),
         "Novogene/Chipseq_1.12.20/QC/multiqc/multiqc.html"
 
 rule fastq:
